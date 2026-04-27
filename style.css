@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+ background: linear-gradient(
+    rgba(5, 5, 85, 0.626),
+    rgb(7, 7, 31)
+
+);
+  color: rgb(81, 17, 17);
+  font-size:larger;
+  font-style: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-top: 10%;
+    margin-right: 5%; 
+     font-style: bold;
+     font-weight: bold;
+
+
+}
+
+.nav-links a {
+  color: rgb(100, 103, 124);
+  text-decoration: none;
+  font-size: large;
+}
+
+.hero {
+  height: 90vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(212, 23, 23, 0.6)), url("bg.jpg");
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #2f2304;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.section {
+    
+  padding: 60px 20px;
+  text-align: center;
+  
+ background: linear-gradient(
+    rgba(5, 5, 85, 0.626),
+    rgb(31, 11, 7));
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.member {
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+footer {
+  background: #0d1117;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
