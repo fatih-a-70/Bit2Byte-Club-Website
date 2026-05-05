@@ -15,6 +15,7 @@ body {
   color: rgb(81, 17, 17);
   font-size:larger;
   font-style: bold;
+  
 }
 
 .nav-links {
@@ -88,4 +89,24 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+}
+
+.about_section {
+    
+   height: 90vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(212, 23, 23, 0.6)), url("bg.jpg");
+  color: white;
+ 
+  text-align: center;
+}
+
+.contact_section {
+   height: 90vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(212, 23, 23, 0.6)), url("bg.jpg");
+  color: white;
+
+
+  text-align: center;
 }
