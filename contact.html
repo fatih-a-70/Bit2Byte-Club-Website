@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact - Bit2Byte</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Bit2Byte KUET</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<header>
-  <nav class="navbar">
-    <h1 class="logo">Bit2Byte</h1>
+<header class="site-header">
+  <nav class="navbar container">
+    <a href="index.html" class="brand"><span class="brand-mark">B2B</span><span class="brand-text"><span>Bit2Byte</span><small>KUET</small></span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="programs.html" class="nav-link">Programs</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="blog.html" class="nav-link">Community</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="register.html" class="btn btn-primary">Join Us</a></li>
+      <li><a href="login.html" class="btn btn-soft">Login</a></li>
+    </ul>
   </nav>
 </header>
 
-<section class="contact_section">
-  <h2>Contact Us</h2>
+<main class="section section-soft">
+  <div class="container" style="max-width: 500px; margin: auto;">
+    <h2 style="text-align:center; color: var(--navy);">Contact Us</h2>
+    <form action="php/contact.php" method="POST" style="display:flex; flex-direction:column; gap:16px; margin-top:32px;">
+      <input type="text" name="name" placeholder="Your Name" required style="padding:12px; border-radius:8px; border:1px solid var(--dark-border);">
+      <input type="email" name="email" placeholder="Your Email" required style="padding:12px; border-radius:8px; border:1px solid var(--dark-border);">
+      <textarea name="message" placeholder="Your Message" rows="5" required style="padding:12px; border-radius:8px; border:1px solid var(--dark-border);"></textarea>
+      <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+    </form>
+  </div>
+</main>
 
-  <p>Feel free to reach out to us anytime!</p>
-
-  <p>Email: bit2byteclub@gmail.com</p>
-  <p>Phone: +880 1234-567890</p>
-  <p>Location: KUET Campus, Khulna</p>
-
-  <form method="POST" action="">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-
-</section>
-
-<footer>
-  <p>© 2026 Bit2Byte Club</p>
+<footer class="site-footer">
+  <div class="container" style="text-align:center; color: var(--white); padding:24px 0;">© 2026 Bit2Byte KUET</div>
 </footer>
-
+<script src="js/main.js"></script>
 </body>
-</html>>
+</html>

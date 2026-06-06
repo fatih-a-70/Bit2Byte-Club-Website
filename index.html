@@ -1,75 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bit2Byte Club</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <h1 style="font-size: 60px ; margin-left:4%; font-style: bold ; font-family:Georgia, 'Times New Roman', Times, serif  ;"
-class="logo"> Bit2Byte 
-</pre></h1>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Bit2Byte KUET</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar container">
+    <a href="index.html" class="brand"><span class="brand-mark">B2B</span><span class="brand-text"><span>Bit2Byte</span><small>KUET</small></span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="programs.html" class="nav-link">Programs</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="blog.html" class="nav-link">Community</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="register.html" class="btn btn-primary">Join Us</a></li>
+      <li><a href="login.html" class="btn btn-soft">Login</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1 style="font-size: 70px ; color: rgb(170, 160, 200);" >Welcome to Bit2Byte Club</h1>
-        <p style="font-size: 25px ;color: rgb(118, 108, 145);">Empowering future developers and innovators.</p>
-        <a href="#about" class="btn">Learn More</a>
+<main>
+  <section class="section section-dark hero-section">
+    <div class="container hero-content">
+      <h1>Welcome to Bit2Byte KUET</h1>
+      <p>Learn, Build, Share in a vibrant software community</p>
+      <div class="hero-buttons">
+        <a href="register.html" class="btn btn-primary btn-large">Join Us</a>
+        <a href="login.html" class="btn btn-soft btn-large">Login</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about" class="section">
-      <h2>About Us</h2>
-      <p>
-        Bit2Byte is a software club focused on coding, innovation, and teamwork.
-      </p>
-    </section>
-
-    <section id="events" class="section">
-      <h2>Events</h2>
-     
-      <ul>
-     <<<   will be added shortly  >>>
-      </ul>
-     </section>
-
-    <section id="team" class="section">
-      <h2>Our Team</h2>
-      <div class="team-container">
-        <div class="member">Fatiha</div>
-        <div class="member">Nazat</div>
-        <div class="member">Alex</div>
+  <section class="section section-soft">
+    <div class="container" style="text-align:center;">
+      <h2>Explore</h2>
+      <p>Quick links to Programs, Projects, Community Feed, and Events</p>
+      <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:30px;">
+        <a href="programs.html" class="btn btn-outline-dark">Programs</a>
+        <a href="projects.html" class="btn btn-outline-dark">Projects</a>
+        <a href="blog.html" class="btn btn-outline-dark">Community</a>
+        <a href="events.html" class="btn btn-outline-dark">Events</a>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <section id="contact" class="section">
-      <h2>Contact Us</h2>
-      <form method="POST" action="">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <span><button type="submit">Send</button> </span>
-      </form>
+<footer class="site-footer">
+  <div class="container" style="text-align:center; color: var(--white); padding:24px 0;">© 2026 Bit2Byte KUET</div>
+</footer>
 
-      
-    </section>
-
-    <footer>
-      <p>© 2026 Bit2Byte Club</p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+<script src="js/main.js"></script>
+</body>
 </html>
