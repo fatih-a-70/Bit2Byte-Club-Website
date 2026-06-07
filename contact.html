@@ -17,27 +17,78 @@
       <li><a href="projects.html" class="nav-link">Projects</a></li>
       <li><a href="blog.html" class="nav-link">Community</a></li>
       <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
       <li><a href="register.html" class="btn btn-primary">Join Us</a></li>
       <li><a href="login.html" class="btn btn-soft">Login</a></li>
     </ul>
   </nav>
 </header>
 
-<main class="section section-soft">
-  <div class="container" style="max-width: 500px; margin: auto;">
-    <h2 style="text-align:center; color: var(--navy);">Contact Us</h2>
-    <form action="php/contact.php" method="POST" style="display:flex; flex-direction:column; gap:16px; margin-top:32px;">
-      <input type="text" name="name" placeholder="Your Name" required style="padding:12px; border-radius:8px; border:1px solid var(--dark-border);">
-      <input type="email" name="email" placeholder="Your Email" required style="padding:12px; border-radius:8px; border:1px solid var(--dark-border);">
-      <textarea name="message" placeholder="Your Message" rows="5" required style="padding:12px; border-radius:8px; border:1px solid var(--dark-border);"></textarea>
-      <button type="submit" class="btn btn-primary btn-large">Send Message</button>
-    </form>
-  </div>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-kicker">Contact</span>
+      <h1>Get in Touch</h1>
+      <p>Contact the Bit2Byte KUET team for membership, events, projects, collaboration, and general questions.</p>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container contact-grid">
+      <div class="info-list">
+        <div class="info-card">
+          <h3>Club Office</h3>
+          <p>Khulna University of Engineering & Technology, Khulna, Bangladesh</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Email</h3>
+          <p>Add official email here</p>
+          <a href="mailto:contact@example.com">contact@example.com</a>
+        </div>
+
+        <div class="info-card">
+          <h3>Social Links</h3>
+          <p>Replace these placeholder links with real Bit2Byte KUET links.</p>
+          <div class="social-row">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <form action="php/contact.php" method="POST" class="form-card">
+        <div>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div>
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+
+        <div>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Enter message subject" required>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Write your message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
   <div class="container" style="text-align:center; color: var(--white); padding:24px 0;">© 2026 Bit2Byte KUET</div>
 </footer>
+
 <script src="js/main.js"></script>
 </body>
 </html>

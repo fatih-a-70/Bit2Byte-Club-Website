@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Bit2Byte KUET</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar container">
+    <a href="index.html" class="brand"><span class="brand-mark">B2B</span><span class="brand-text"><span>Bit2Byte</span><small>KUET</small></span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="programs.html" class="nav-link">Programs</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="blog.html" class="nav-link">Community</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="register.html" class="btn btn-primary">Join Us</a></li>
+      <li><a href="login.html" class="btn btn-soft">Login</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-kicker">Login</span>
+      <h1>Member Login</h1>
+      <p>Login area for members, organizers, and admins. Connect this page with PHP and MySQL later.</p>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container form-wrap">
+      <form action="php/login.php" method="POST" class="form-card">
+        <div>
+          <label for="email">Email or Student ID</label>
+          <input type="text" id="email" name="email" placeholder="Enter email or student ID" required>
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-large">Login</button>
+
+        <p style="text-align:center;">Not a member yet? <a href="register.html" style="color:#93C5FD; font-weight:800;">Join Bit2Byte</a></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container" style="text-align:center; color: var(--white); padding:24px 0;">© 2026 Bit2Byte KUET</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
