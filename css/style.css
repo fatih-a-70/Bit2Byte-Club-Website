@@ -62,11 +62,16 @@ select {
 
 .site-header {
   width: 100%;
-  background: rgba(15, 23, 42, 0.97);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.37);
+  backdrop-filter: blur(30px);
   position: sticky;
   top: 0;
   z-index: 999;
+}
+@media (max-width: 768px) {
+  .site-header {
+    position: static;
+  }
 }
 
 .navbar {
