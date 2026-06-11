@@ -1,73 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Add Event | Bit2Byte KUET</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header class="site-header">
-<nav class="navbar container">
-<a href="index.html" class="brand"><span class="brand-mark">B2B</span><span class="brand-text"><span>Bit2Byte</span><small>KUET</small></span></a>
-<ul class="nav-menu">
-<li><a href="admin-dashboard.html" class="nav-link">Dashboard</a></li>
-<li><a href="add-project.html" class="nav-link">Add Project</a></li>
-<li><a href="add-blog.html" class="nav-link">Add Blog</a></li>
-<li><a href="add-event.html" class="nav-link active">Add Event</a></li>
-<li><a href="php/logout.php" class="btn btn-soft">Logout</a></li>
-</ul>
-</nav>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Event | Bit2Byte KUET</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="brand"
+          ><span class="brand-mark">B2B</span
+          ><span class="brand-text"
+            ><span>Bit2Byte</span><small>KUET</small></span
+          ></a
+        >
+        <ul class="nav-menu">
+          <li><a href="admin-dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="add-project.html" class="nav-link">Add Project</a></li>
+          <li><a href="add-blog.html" class="nav-link">Add Blog</a></li>
+          <li>
+            <a href="add-event.html" class="nav-link active">Add Event</a>
+          </li>
+          <li><a href="php/logout.php" class="btn btn-soft">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<main>
-<section class="page-hero">
-<div class="container">
-<span class="section-kicker">Admin</span>
-<h1>Add New Event</h1>
-<p>Fill in event details to schedule for members.</p>
-</div>
-</section>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="section-kicker">Admin</span>
+          <h1>Add New Event</h1>
+          <p>Fill in event details to schedule for members.</p>
+        </div>
+      </section>
 
-<section class="section section-soft">
-<div class="container form-wrap">
-<form action="php/add-event.php" method="POST" class="form-card" enctype="multipart/form-data">
-<div>
-<label for="title">Event Title</label>
-<input type="text" id="title" name="title" placeholder="Enter event title" required>
-</div>
+      <section class="section section-soft">
+        <div class="container form-wrap">
+          <form
+            action="php/add-event.php"
+            method="POST"
+            class="form-card"
+            enctype="multipart/form-data"
+          >
+            <div>
+              <label for="title">Event Title</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Enter event title"
+                required
+              />
+            </div>
 
-<div>
-<label for="description">Description</label>
-<textarea id="description" name="description" rows="5" placeholder="Enter event details" required></textarea>
-</div>
+            <div>
+              <label for="description">Description</label>
+              <textarea
+                id="description"
+                name="description"
+                rows="5"
+                placeholder="Enter event details"
+                required
+              ></textarea>
+            </div>
 
-<div>
-<label for="date">Date & Time</label>
-<input type="datetime-local" id="date" name="date" required>
-</div>
+            <div>
+              <label for="date">Date & Time</label>
+              <input type="datetime-local" id="date" name="date" required />
+            </div>
 
-<div>
-<label for="venue">Venue</label>
-<input type="text" id="venue" name="venue" placeholder="Event location" required>
-</div>
+            <div>
+              <label for="venue">Venue</label>
+              <input
+                type="text"
+                id="venue"
+                name="venue"
+                placeholder="Event location"
+                required
+              />
+            </div>
 
-<div>
-<label for="image">Event Banner Image</label>
-<input type="file" id="image" name="image" accept="image/*">
-</div>
+            <div>
+              <label for="image">Event Banner Image</label>
+              <input type="file" id="image" name="image" accept="image/*" />
+            </div>
+            <div>
+              <label for="type">Tags / Type</label>
+              <input
+                type="text"
+                id="type"
+                name="type"
+                placeholder="Workshop, Beginner, Web"
+                required
+              />
+            </div>
+            <div>
+              <label for="link">Event Link</label>
+              <input
+                type="url"
+                id="link"
+                name="link"
+                placeholder="Enter registration or recap URL"
+              />
+            </div>
+            <div style="text-align: center; margin-top: 20px">
+              <button type="submit" class="btn btn-primary btn-large">
+                Add Event
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
 
-<div style="text-align:center; margin-top:20px;">
-<button type="submit" class="btn btn-primary btn-large">Add Event</button>
-</div>
-</form>
-</div>
-</section>
-</main>
-
-<footer class="site-footer">
-<div class="container">© 2026 Bit2Byte KUET</div>
-</footer>
-<script src="js/main.js"></script>
-</body>
+    <footer class="site-footer">
+      <div class="container">© 2026 Bit2Byte KUET</div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>
