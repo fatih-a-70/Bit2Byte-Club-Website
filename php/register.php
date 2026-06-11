@@ -1,4 +1,9 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+session_start();
 include "config.php";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -12,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $message = $_POST['message'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
+    $role = 'member'; // default role for new users
 
     if($password !== $confirm_password){
         echo "Passwords do not match.";
@@ -20,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-    $stmt = $conn->prepare("INSERT INTO users (full_name, student_id, department, batch, email, phone, interest, message, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssssss", $name, $student_id, $department, $batch, $email, $phone, $interest, $message, $hashed_password);
+    $stmt = $conn->prepare("INSERT INTO users (full_name, student_id, department, batch, email, phone, interest, message, password, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssssss", $name, $student_id, $department, $batch, $email, $phone, $interest, $message, $hashed_password, $role);
 
     if ($stmt->execute()) {
         header("Location: ../login.html");
