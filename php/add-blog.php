@@ -3,14 +3,21 @@ include "config.php";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $title = $_POST['title'];
-    $content = $_POST['content'];
     $category = $_POST['category'];
+    $description = $_POST['description'];
+    $imageName = "";
 
-    $stmt = $conn->prepare("INSERT INTO blogs (title, content, category) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $title, $content, $category);
+    if(isset($_FILES['image']) && $_FILES['image']['name'] !== "") {
+        $imageName = time() . "_" . basename($_FILES['image']['name']);
+        move_uploaded_file($_FILES['image']['tmp_name'], "../uploads/" . $imageName);
+    }
+
+    $stmt = $conn->prepare("INSERT INTO blogs (title, category, description, image) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $title, $category, $description, $imageName);
 
     if($stmt->execute()){
-        echo "Blog added successfully!";
+        header("Location: ../blog.html");
+        exit;
     } else {
         echo "Error: " . $stmt->error;
     }

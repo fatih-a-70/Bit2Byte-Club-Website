@@ -20,11 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-    $stmt = $conn->prepare("INSERT INTO members (name, student_id, department, batch, email, phone, interest, message, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO users (full_name, student_id, department, batch, email, phone, interest, message, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssssssss", $name, $student_id, $department, $batch, $email, $phone, $interest, $message, $hashed_password);
 
     if ($stmt->execute()) {
         header("Location: ../login.html");
+        exit;
     } else {
         echo "Error: " . $stmt->error;
     }

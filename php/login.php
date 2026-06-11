@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare("SELECT * FROM members WHERE email=? OR student_id=? LIMIT 1");
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email=? OR student_id=? LIMIT 1");
     $stmt->bind_param("ss", $email, $email);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -22,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             } else {
                 header("Location: ../member-dashboard.html");
             }
+            exit;
         } else {
             echo "Incorrect password.";
         }
