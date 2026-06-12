@@ -646,3 +646,25 @@ footer,
     grid-template-columns: 1fr;
   }
 }
+.view-plus-container {
+  display: flex;
+  gap: 102px;  
+}
+
+.view-plus-container a.add-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;  
+  height: 58px;
+  font-size: 2rem;  
+  color: rgb(148, 142, 226);
+  background: rgb(20, 13, 80);  
+  border-radius: 100%;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.view-plus-container a.add-icon:hover {
+  transform: scale(1.2);
+}

@@ -15,15 +15,15 @@ include "php/config.php"; // database connection
     <nav class="navbar container">
       <a href="index.php" class="brand"><span class="brand-mark">B2B</span><span class="brand-text"><span>Bit2Byte</span><small>KUET</small></span></a>
       <ul class="nav-menu">
-        <li><a href="index.php" class="nav-link">Home</a></li>
-        <li><a href="about.php" class="nav-link">About</a></li>
-        <li><a href="programs.php" class="nav-link">Programs</a></li>
-        <li><a href="projects.php" class="nav-link active">Projects</a></li>
-        <li><a href="blog.php" class="nav-link">Community</a></li>
+           <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="projects.php" class="nav-link">Projects</a></li>
+        <li><a href="blog.php" class="nav-link active">Community</a></li>
         <li><a href="events.php" class="nav-link">Events</a></li>
-        <li><a href="contact.php" class="nav-link">Contact</a></li>
-        <li><a href="register.php" class="btn btn-primary">Join Us</a></li>
-        <li><a href="login.php" class="btn btn-soft">Login</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="register.html" class="btn btn-primary">Join Us</a></li>
+        <li><a href="login.html" class="btn btn-soft">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -64,7 +64,11 @@ include "php/config.php"; // database connection
                         }
                       ?>
                     </div>
-                    <a href="<?php echo htmlspecialchars($row['link']); ?>">View Project</a>
+                   <div class="view-plus-container">
+    <a href="<?php echo htmlspecialchars($row['link']); ?>">View Project</a>
+    <a href="add-to-dashboard.php?type=project&id=<?php echo $row['id']; ?>" class="add-icon" title="Add to my dashboard">+</a>
+</div>
+                     
                   </div>
                   <?php
               }

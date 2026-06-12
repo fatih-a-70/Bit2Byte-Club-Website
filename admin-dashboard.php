@@ -1,3 +1,16 @@
+<?php
+session_start();
+include "php/config.php";
+
+ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header("Location: login.html");
+    exit;
+}
+
+$projectCount = $conn->query("SELECT COUNT(*) as cnt FROM projects")->fetch_assoc()['cnt'];
+$blogCount = $conn->query("SELECT COUNT(*) as cnt FROM blogs")->fetch_assoc()['cnt'];
+$eventCount = $conn->query("SELECT COUNT(*) as cnt FROM events")->fetch_assoc()['cnt'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +22,9 @@
 <body>
 <header class="site-header">
   <nav class="navbar container">
-    <a href="index.html" class="brand"><span class="brand-mark">B2B</span><span class="brand-text"><span>Bit2Byte</span><small>KUET</small></span></a>
+    <a href="admin-dashboard.php" class="brand"><span class="brand-mark">B2B</span><span class="brand-text"><span>Bit2Byte</span><small>KUET</small></span></a>
     <ul class="nav-menu">
-      <li><a href="admin-dashboard.html" class="nav-link active">Dashboard</a></li>
+      <li><a href="admin-dashboard.php" class="nav-link active">Dashboard</a></li>
       <li><a href="add-project.html" class="nav-link">Add Project</a></li>
       <li><a href="add-blog.html" class="nav-link">Add Blog</a></li>
       <li><a href="add-event.html" class="nav-link">Add Event</a></li>
@@ -32,15 +45,15 @@
   <section class="section section-soft">
     <div class="container stats-grid">
       <div>
-        <strong>25</strong>
+        <strong><?php echo $projectCount; ?></strong>
         <span>Total Projects</span>
       </div>
       <div>
-        <strong>15</strong>
+        <strong><?php echo $eventCount; ?></strong>
         <span>Upcoming Events</span>
       </div>
       <div>
-        <strong>30</strong>
+        <strong><?php echo $blogCount; ?></strong>
         <span>Blog Posts</span>
       </div>
     </div>
