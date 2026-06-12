@@ -648,23 +648,37 @@ footer,
 }
 .view-plus-container {
   display: flex;
-  gap: 102px;  
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .view-plus-container a.add-icon {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 58px;  
+  width: 58px;
   height: 58px;
-  font-size: 2rem;  
+  font-size: 2rem;
   color: rgb(148, 142, 226);
-  background: rgb(20, 13, 80);  
-  border-radius: 100%;
+  background: rgb(20, 13, 80);
+  border-radius: 50%;
   text-decoration: none;
   transition: transform 0.2s;
 }
 
 .view-plus-container a.add-icon:hover {
   transform: scale(1.2);
+}
+
+.member-dashboard-section {
+  text-align: center; /* centers the heading */
+  margin-top: 100px; /* space above the heading */
+  margin-bottom: 100px; /* space below the section */
+}
+
+.member-dashboard-section h2 {
+  font-size: 2rem;
+  margin-bottom: 100px; /* space below heading, before cards */
 }

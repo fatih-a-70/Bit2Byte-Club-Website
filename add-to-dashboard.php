@@ -17,7 +17,9 @@ $item_id = (int) $_GET['id'];
 $type = $_GET['type'];
 
 $tables = [
-    "project" => ["table" => "member_projects", "column" => "project_id"] 
+    "project" => ["table" => "member_projects", "column" => "project_id"],
+    "blog"    => ["table" => "member_blogs", "column" => "blog_id"],
+    "event"   => ["table" => "member_events", "column" => "event_id"]
 ];
 
 if (!array_key_exists($type, $tables) || $item_id <= 0) {

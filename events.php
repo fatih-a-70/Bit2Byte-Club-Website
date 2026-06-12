@@ -67,7 +67,18 @@ include "php/config.php";
                       }
                       ?>
                     </div>
-                    <a href="<?php echo htmlspecialchars($row['link'] ?? '#'); ?>"><?php echo ($row['event_date'] >= date('Y-m-d')) ? 'Register Now' : 'View Recap'; ?></a>
+   <a href="<?php echo htmlspecialchars($row['link'] ?? '#'); ?>"><?php echo ($row['event_date'] >= date('Y-m-d')) ? 'Register Now' : 'View Recap'; ?></a>
+  <div class="view-plus-container">
+    
+                 
+     <a href="add-to-dashboard.php?type=event&id=<?php echo $row['id']; ?>" class="add-icon" title="Add to my dashboard">+</a>
+</div>
+
+
+                    
+
+
+                    
                   </div>
                   <?php
               }

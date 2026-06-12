@@ -63,7 +63,13 @@ include "php/config.php";
                     <span class="date-badge"><?php echo htmlspecialchars($row['category']); ?></span>
                     <h3><?php echo htmlspecialchars($row['title']); ?></h3>
                     <p><?php echo htmlspecialchars($row['description']); ?></p>
-                    <a href="<?php echo htmlspecialchars($row['link']); ?>">Read More</a>
+    <a href="<?php echo htmlspecialchars($row['link']); ?>">Read More</a>
+
+                     <div class="view-plus-container">
+    
+                                  
+     <a href="add-to-dashboard.php?type=blog&id=<?php echo $row['id']; ?>" class="add-icon" title="Add to my dashboard">+</a>
+</div>
                   </div>
                   <?php
               }

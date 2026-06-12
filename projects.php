@@ -64,8 +64,9 @@ include "php/config.php"; // database connection
                         }
                       ?>
                     </div>
+                        <a href="<?php echo htmlspecialchars($row['link']); ?>">View Project</a>
+
                    <div class="view-plus-container">
-    <a href="<?php echo htmlspecialchars($row['link']); ?>">View Project</a>
     <a href="add-to-dashboard.php?type=project&id=<?php echo $row['id']; ?>" class="add-icon" title="Add to my dashboard">+</a>
 </div>
                      
